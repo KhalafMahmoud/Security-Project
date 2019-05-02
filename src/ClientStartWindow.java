@@ -64,7 +64,7 @@ public class ClientStartWindow extends JFrame implements PropertyChangeListener,
 				+ "1. Type @username<space>yourmessage to send a message to a client\n" +
 				"2. Type show members to see a list of available clients\n"+
 				"3. Type @username<space><comma><space>encryptedImageFile\n"+
-				"4.	To broadcast encrypted message type message<space><comma><space>encryptedImageFile\n"+
+				"4. To broadcast encrypted message type message<space><comma><space>encryptedImageFile\n"+
 				"5. To broadcast a direct message just type your message and send", 20, 72);
 		welcome = new JLabel("Welcome "+ name, SwingConstants.CENTER);
 		setContentPane(new JLabel(new ImageIcon("resources/images/clientSWBack.jpg")));
@@ -233,7 +233,7 @@ public class ClientStartWindow extends JFrame implements PropertyChangeListener,
 			double mse = 0;
 			double noOfpixels = 0;
 			try {
-				im2 = ImageIO.read(new File(Outname+".png"));
+				im2 = ImageIO.read(new File(username + "/" + Outname+".png"));
 				im1  = ImageIO.read(openedFile);
 				System.out.println(im1.equals(null));
     int width = im1.getWidth();
@@ -275,7 +275,7 @@ public class ClientStartWindow extends JFrame implements PropertyChangeListener,
 	    		Outname = (String)JOptionPane.showInputDialog(null, "Output file name?",
 						"Output File", JOptionPane.PLAIN_MESSAGE, null,  null,"");
 				
-				String message = (String)JOptionPane.showInputDialog(null, "The Message you want to encrypt?",
+				message = (String)JOptionPane.showInputDialog(null, "The Message you want to encrypt?",
 						"Message", JOptionPane.PLAIN_MESSAGE, null,  null,"");
 				
 				if ( Outname == null || Outname.isEmpty()
