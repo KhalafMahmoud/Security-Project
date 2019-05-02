@@ -45,3 +45,7 @@ To run the application:
 •	To exit the chat, click logout then the window is closed.
 
 •	To delete your account, click deactivate.
+
+•	To show capacity and fidelity, click show stats After encryption of the message.
+
+![Stats View](../master/resources/images/5.PNG)
